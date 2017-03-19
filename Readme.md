@@ -1,22 +1,22 @@
-# Install deps
+## Install deps
 
 ```
 npm install
 ```
 
-# Run server
+## Run server
 
 ```
 npm run serve
 ```
 
 
-# Run tests
+## Run tests
 
 ```
 npm run test
 ```
 
-# About
+## About
 
 - Scafolded with [angular fountain generator](https://github.com/FountainJS/generator-fountain-webapp)
