@@ -1,6 +1,6 @@
 import angular from 'angular';
 import 'angular-mocks';
-import { Dashboard } from './Dashboard';
+import { Dashboard } from './dashboard';
 
 describe('dashboard component', () => {
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('dashboard component', () => {
 
   it('shoud call filterResults after the init method', angular.mock.inject($componentController => {
     const bindings = {
-      filterResults: () => {}
+      filterResults: () => { }
     };
     const component = $componentController('app', {}, bindings);
     spyOn(component, 'filterResults').and.callThrough();
@@ -29,7 +29,7 @@ describe('dashboard component', () => {
 
   it('shoud call getCountries after the init method', angular.mock.inject($componentController => {
     const bindings = {
-      getCountries: () => {}
+      getCountries: () => { }
     };
     const component = $componentController('app', {}, bindings);
     spyOn(component, 'getCountries').and.callThrough();

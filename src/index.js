@@ -1,5 +1,5 @@
 import angular from 'angular';
-import { Dashboard } from './app/Dashboard';
+import { Dashboard } from './app/dashboard';
 import './index.scss';
 
 export const app = 'app';
