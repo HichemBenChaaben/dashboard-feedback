@@ -6,25 +6,7 @@ body {
   font-size: 14px;
 }
 
-.container {
-  margin: 0 auto;
-  width: 980px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.u__fiters__search input {
-  padding: 8px;
-}
-.u__fiters__search, .u__filters__rate {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 10px;
-  padding-left: 0;
-}
-
+// [TODO:split into different files]
 table {
   width: 100%;
   overflow-x: auto;
@@ -70,6 +52,26 @@ select {
   background: white;
   border: 1px solid #d4d4d4;
 }
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.u__fiters__search input {
+  padding: 8px;
+}
+.u__fiters__search, .u__filters__rate {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  padding-left: 0;
+}
+
 
 .u__details table thead tr:hover {
   background-color: #525659;
