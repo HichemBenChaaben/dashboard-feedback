@@ -5,19 +5,9 @@
         placeholder="Search here!">
     </div>
     <div class="u__filters__rate">
-      <ul>
-        <li ng-repeat="(item, index) in $ctrl.ratingScale track by $index">
-          <label>
-            <input type="checkbox"
-                   ng-init="$ctrl.rating[$index] = true;"
-                   value="{{$index + 1}}"
-                   ng-click="$ctrl.handleRatingChange($event, $ctrl.rating)"
-                   ng-model="$ctrl.rating[$index]" />
-            <span>{{$index + 1}}</span>
-          </label>
-        </li>
-      </ul>
+      <rating rating-arr="$ctrl.rating" on-change="$ctrl.handleRatingChange(index, $ctrl.rating)"></rating>
     </div>
+
     <div class="u__filters__country">
       <select ng-model="$ctrl.filters.country" ng-change="$ctrl.filterResults()">
         <option value="">-- Select a country --</option>
