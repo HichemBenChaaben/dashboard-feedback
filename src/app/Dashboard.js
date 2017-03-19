@@ -13,8 +13,8 @@ class DashboardController {
           activated: false,
           payload: []
         },
-        keyword: '',
-        country: ''
+        keyword: undefined,
+        country: undefined
       };
       this.results = [];
       const url = 'http://cache.usabilla.com/example/apidemo.json';
