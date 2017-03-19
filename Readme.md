@@ -4,7 +4,7 @@
 npm install
 ```
 
-## Run server
+# Run server
 
 ```
 npm run serve
@@ -17,6 +17,6 @@ npm run serve
 npm run test
 ```
 
-## About
+# About
 
 - Scafolded with [angular fountain generator](https://github.com/FountainJS/generator-fountain-webapp)
