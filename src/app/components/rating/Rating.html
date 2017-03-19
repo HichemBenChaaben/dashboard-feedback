@@ -1,0 +1,12 @@
+<ul>
+  <li ng-repeat="(item, index) in $ctrl.ratingScale track by $index">
+    <label>
+        <input type="checkbox"
+                ng-init="$ctrl.ratingArr[$index] = true;"
+                value="{{$index + 1}}"
+                ng-click="$ctrl.handleRatingChange($event.target.value, $ctrl.ratingArr)"
+                ng-model="$ctrl.ratingArr[$index]" />
+        <span>{{$index + 1}}</span>
+      </label>
+  </li>
+</ul>

@@ -1,10 +1,9 @@
-import * as utils from './utils';
+import * as utils from './Utils';
 
 class DashboardController {
     /**@ngInject */
-    constructor($http, $log) {
+    constructor($http) {
       this.$http = $http;
-      this.$log = $log;
     }
     $onInit() {
       this.ratingScale = utils.getRangeFromNumber(5);
@@ -26,7 +25,7 @@ class DashboardController {
               this.filterResults();
             }).catch(err => {
               // handle some b.l here
-              this.$log.error(err);
+              console.error(err);
             });
     };
     /**
@@ -87,8 +86,8 @@ class DashboardController {
       return arr.filter(item => item.computed_location.indexOf(country) !== -1);
     }
 
-    handleRatingChange(event, rating) {
-      const selectedVal = event.target.value;
+    handleRatingChange(index, rating) {
+      const selectedVal = index + 1;
       const newArr = this.ratingScale;
       this.filters.rating.payload = utils.getArrayFromObject(this.rating);
       // check if its the same array in order to toggle activated / non activated ?
@@ -98,7 +97,7 @@ class DashboardController {
 }
 
 export const Dashboard = {
-  template: require('./dashboard.html'),
+  template: require('./Dashboard.html'),
   controller: DashboardController
 }
 
