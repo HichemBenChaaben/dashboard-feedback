@@ -60,7 +60,7 @@ class DashboardController {
     filterByKeyword (arr) {
       const keyword = this.filters.keyword;
       let filteredResults = [];
-      if (this.filters.keyword.length) {
+      if (this.filters.keyword && this.filters.keyword.length) {
         filteredResults = arr.filter(item => item.comment.toLowerCase())
           .filter(item => {
           if (item.comment.indexOf(keyword.toLowerCase()) !== -1) {
