@@ -1,6 +1,6 @@
 import angular from 'angular';
 import 'angular-mocks';
-import { getArrayFromObject, getArraysDifference, getRangeFromNumber, sum } from './Utils';
+import { getArrayFromObject, getArraysDifference, getRangeFromNumber, sum } from './utils';
 
 describe('it should return an array based on an object', () => {
   it('should return an array based on object', () => {
