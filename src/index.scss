@@ -1,0 +1,166 @@
+body {
+  background-color: #eef3f7;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.u__fiters__search input {
+  padding: 8px;
+}
+.u__fiters__search, .u__filters__rate {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  padding-left: 0;
+}
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-collapse: collapse;
+  position: relative;
+}
+table td, table th {
+  padding: 15px;
+}
+table thead tr {
+  background: #525659;
+  color: white;
+}
+table tr {
+  position: relative;
+}
+table tbody tr:hover {
+  background-color: #ebeced;
+}
+
+table tbody tr .u__details {
+  display: none;
+}
+table tbody tr:hover td .u__details {
+  display: block;
+  position: absolute;
+  margin-top: 15px;
+  padding: 15px;
+  width: auto;
+  background-color: #cff0af;
+  z-index: 999;
+  left: 0;
+  right: 0;
+}
+table td {
+  border-bottom: 1px solid #ebeced;
+  cursor: pointer;
+}
+
+select {
+  height: 30px;
+  background: white;
+  border: 1px solid #d4d4d4;
+}
+
+.u__details table thead tr:hover {
+  background-color: #525659;
+}
+
+.arrow_box {
+	position: relative;
+	background: #cff0af;
+}
+.arrow_box:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(207, 240, 175, 0);
+	border-bottom-color: #cff0af;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+table tbody tr:hover td .u__details {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.u__filters__country {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.u__filters__rate, .u__filters__search {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// filters rate
+.u__filters__rate ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.u__filters__rate ul li {
+  display: inline-block;
+}
+.u__filters__rate label {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.u__comment-rate {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  display: inline;
+  background:#05a3c2;
+  vertical-align: middle;
+  display: table-cell;
+}
+.u__filters__rate label span {
+  height: 30px;
+  width: 30px;
+  margin: 4px;
+  border-radius: 50%;
+  border: none;
+  background: #d1dadc;
+  border: 1px solid #ebeced;
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+.u__filters__rate input {
+  display: none;
+}
+.u__filters__rate label input:checked + span {
+  background-color: #05a3c2;
+}
+
+.u__results__no-results {
+  padding : 10px;
+  border: 1px solid lightgray;
+  background: lightyellow;
+}

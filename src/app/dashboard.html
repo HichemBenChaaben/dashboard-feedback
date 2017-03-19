@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="u__filters">
+    <div class="u__fiters__search">
+      <input type="text" ng-model-options='{ debounce: 200}' ng-change="$ctrl.filterResults()" ng-model="$ctrl.filters.keyword"
+        placeholder="Search here!">
+    </div>
+    <div class="u__filters__rate">
+      <ul>
+        <li ng-repeat="(item, index) in $ctrl.ratingScale track by $index">
+          <label>
+            <input type="checkbox"
+                   ng-init="$ctrl.rating[$index] = true;"
+                   value="{{$index + 1}}"
+                   ng-click="$ctrl.handleRatingChange($event, $ctrl.rating)"
+                   ng-model="$ctrl.rating[$index]" />
+            <span>{{$index + 1}}</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="u__filters__country">
+      <select ng-model="$ctrl.filters.country" ng-change="$ctrl.filterResults()">
+        <option value="">-- Select a country --</option>
+        <option ng-repeat="country in $ctrl.countries track by $index">{{country}}</option>
+      </select>
+    </div>
+  </div>
+  <!--display table-->
+  <div class="u__results">
+    <div class="u__results__no-results" ng-if="$ctrl.results.length ==0">
+      No results found
+    </div>
+    <table ng-if="$ctrl.results.length">
+      <thead>
+        <th>Rating</th>
+        <th>Comment</th>
+        <th>Browser</th>
+        <th>Device</th>
+        <th>Platform</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in $ctrl.results track by $index">
+          <td>
+            <span class="u__comment-rate">{{item.rating}}</span>
+            <div class="u__details arrow_box">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Snapshot</th>
+                    <th>Subject</th>
+                    <th>Performance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center">
+                    <td>{{item.geo.country}}</td>
+                    <td>{{item.geo.city}}</td>
+                    <td>
+                      <a target="_blank" href="{{item.images.cropped.url}}">
+                        <img ng-src="{{item.images.thumbnail.url}}" />
+                      </a>
+                    </td>
+                    <td>{{item.custom.subject}}</td>
+                    <td>{{item.performance}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+          <td>{{item.comment}}</td>
+          <td>{{item.computed_browser.Browser}} {{item.computed_browser.Version}}</td>
+          <td>{{item.computed_browser.Browser}}</td>
+          <td>{{item.computed_browser.Platform}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
