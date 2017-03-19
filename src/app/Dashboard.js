@@ -98,7 +98,7 @@ class DashboardController {
 }
 
 export const Dashboard = {
-  template: require('./Dashboard.html'),
+  template: require('./dashboard.html'),
   controller: DashboardController
 }
 
